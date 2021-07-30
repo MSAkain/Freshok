@@ -12,46 +12,34 @@ $silver-100: #F6F6F6;
 $white: #fff;
 $grey: #4f4f4f;
 $grenn-300: #EBEBEB;
+$grenn-500: #63A60E;
+$grenn-600: #4D810C;
+$bg-promo: #F5F5F5;
+$hover-link: #4D800C;
 
 
-%last-300 {
-	font-family: 'Lato-Light';
-	font-weight: 300;
+%lato {
+	font-family: Lato, sans-serif;
 }
 
-%lato-400 {
-	font-family: 'Lato-Regular';
-	font-weight: 400;
+%signika{
+	font-family: Signika, sans-serif;
 }
 
-%lato-600 {
-	font-family: 'Lato-Semibold';
-	font-weight: 600;
-}
-
-%lato-700 {
-	font-family: 'Lato-Bold';
-	font-weight: 700;
-}
-
-%signika-400 {
-	font-family: 'Signika-Regular';
-	font-weight: 400;
-}
-
-%signika-300 {
-	font-family: 'Signika-Light';
-	font-weight: 300;
-}
-
-%signika-600 {
-	font-family: 'Signika-SemiBold';
-	font-weight: 600;
-}
-
-%signika-700 {
-	font-family: 'Signika-Bold';
-	font-weight: 700;
+@mixin line-clamp(
+	$font-size,
+	$line-height,
+	$lines-to-show
+) {
+	display: block; 
+	display: -webkit-box;
+	font-size: rem($font-size);
+	max-height: rem(($font-size * $line-height * $lines-to-show)); 
+	line-height: $line-height;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $lines-to-show;
 }
 
 
