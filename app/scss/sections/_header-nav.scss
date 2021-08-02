@@ -1,0 +1,86 @@
+.nav {	
+
+	width: 239px;
+	background-color: $white;
+	border: 1px solid $grenn-300;
+	border-radius: 6px;
+	transition: background-color 0.5s;
+	position: relative;
+	cursor: pointer;
+	transition: transform 0.5s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $green-100;
+		
+		.nav__list {
+			transform: translateY(-3px);
+		}
+
+		&::after {
+			transform: rotate(180deg);
+			top: 20px;
+		}
+	}
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		background-repeat: no-repeat;
+	}	
+
+	&::before {
+		background-image: url('../images/icon/nav-icon.svg');
+		width: 25px;
+		height: 17px;
+		left: 16px;
+		top: 16px;
+	}
+
+	&::after {
+		background-image: url('../images/icon/arrow-down.svg');
+		width: 8px;
+		height: 7px;
+		top: 22px;
+		right: 22px;
+	}
+
+	&__list {
+		position: absolute;
+		z-index: 11;
+		transform: translateY(-200%);
+		left: -1px;
+		background-color: $white;
+		border-radius: 0 0 6px 6px;
+	}
+
+	&__descr {
+		text-align: center;
+		padding: 15px;
+		color: $green-900;
+		@extend %lato;
+		font-weight: 600;
+	}	
+
+	&__item {
+		padding-left: 20px;
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-right: 78px;
+		border-left: 3px solid transparent;
+		transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+
+		&:hover {
+			background-color: rgba(193, 193, 193, 0.3);
+			border-left: 3px solid $green-900;
+			color: $green-900;
+		}
+	}
+
+	._icon-facebook {
+		font-size: 22px;
+	}
+}

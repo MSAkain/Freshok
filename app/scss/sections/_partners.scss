@@ -1,0 +1,22 @@
+.partners {
+	
+	&__item {
+		cursor: pointer;
+		transition: opacity 0.5s;
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__list {
+		padding: 73px 0;
+	}
+
+	&__slide {
+		display: flex !important;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

@@ -1,0 +1,155 @@
+.footer {
+
+	background-color: $dark-800;
+	color: $white;
+	padding-top: 30px;
+	letter-spacing: 1px;
+
+	&__logo {
+		margin-bottom: 30px;
+		display: inline-block;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		padding-bottom: 30px;
+	}
+
+	&__form {
+		margin-right: 126px;
+		position: relative;
+		max-width: 300px;
+	}
+
+	&__label {
+		color: $white;
+		margin-top: 30px;
+		letter-spacing: 0;
+	}
+
+	&__input {
+		max-width: 182px;
+		display: inline-block;
+		width: 100%;
+		margin-top: 13px;
+		background-color: $white;
+		border: none;
+		border-radius: 6px 0 0 6px;
+		padding: 11px 15px;
+		margin-right: -5px;
+		line-height: 18px;
+
+
+		&::placeholder {
+			color: $grey;
+		}
+	}
+
+	&__button {
+		max-width: 118px;
+		padding: 12px 10px 12px 14px;
+		background-color: $grenn-500;
+		color: $white;
+		font-size: 12px;
+		@extend %lato;
+		font-weight: 700;
+		display: inline-block;
+		height: 40px;
+		border-radius: 0 6px 6px 0;
+		text-transform: uppercase;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		&:focus {
+			box-shadow: 0 0 0 4px $green-200;
+		}
+
+		&:hover {
+			background-color: $hover-link;
+		}
+
+		&:active {
+			box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	&__links {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 40px;
+		grid-row-gap: 20px;
+		margin-right: 72px;
+	}
+
+	&__link {
+		transition: opacity 0.5s;
+		margin-left: 22px;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		letter-spacing: 0;
+	}
+
+	&__info-box {
+		display: flex;
+		margin-bottom: 18px;
+	}
+
+	&__info-title {
+		margin-right: 12px;
+	}
+
+	&__info-text {
+		margin-bottom: 18px;
+		text-transform: capitalize;
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: space-around;
+		margin-right: 32px;
+	}
+
+	&__socials-link {
+		width: 100%;
+		height: 100%;
+		svg {
+			transition: opacity 0.5s;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__bottom {
+		border-top: 1px solid rgba($white, 0.1);
+		padding: 24px 0;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__pay {
+		&:not(:last-child) {
+			margin-right: 18px;
+		}
+
+		svg {
+			transition: opacity 0.5s;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}

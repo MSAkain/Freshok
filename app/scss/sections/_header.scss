@@ -1,0 +1,174 @@
+.header {
+	background-color: $dark-800;
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		font-size: 13px;
+		@extend %lato;
+		font-weight: 700;
+		color: $white;
+		text-transform: uppercase;
+		padding: 15px 0;
+	}
+
+	&__links {
+		display: flex;
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 48px;
+		transition: opacity 0.5s;
+		&:not(:last-child) {
+			margin-right: 29px;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__links-right {
+		display: flex;
+	}
+	
+	&__links-item {
+		transition: opacity 0.5s;
+		&:not(:last-child) {
+			margin-right: 24px;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__middle {
+	background-color: $green-900;
+	padding: 25px 0;
+	}
+
+	&__middle-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__middle-form {
+		position: relative;
+		max-width: 587px;
+		width: 100%;
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url('../images/icon/icon-search.svg');
+			background-repeat: no-repeat;
+			width: 21px;
+			height: 20px;
+			left: 14px;
+			top: 16px;
+		}
+	}
+
+	&__middle-input {
+		padding: 15px 10px 15px 51px;
+		border-radius: 6px;
+		border: none;
+		max-width: 424px;
+		width: 100%;
+		margin-right: -8px;
+
+		&::placeholder {
+			color: $dark-800;
+			font-size: 14px;
+			line-height: 1.4;
+		}
+	}
+
+	&__bottom-nav {
+		margin-left: -3px;
+	}
+
+	&__middle-button {
+		background-color: $dark-800;
+		border-radius: 0 6px 6px 0;
+		padding: 13px 25px 14px 25px;	
+		color: $white;
+		border: none;
+		font-weight: 600;
+		max-width: 160px;
+		display: inline-block;
+		text-transform: uppercase;
+		transition: background-color 0.5s, box-shadow 0.5s;
+
+		&:focus {
+			background-color: $dark-800;
+			box-shadow: 0 0 0 4px rgba($white, 0.5);
+		}
+
+		&:hover {
+			background-color: rgba(49, 53, 43, 0.85);
+		}
+
+		&:active {
+			box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	&__middle-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__middle-item {
+		position: relative;
+		padding: 13px;
+		transition: background-color 0.5s;
+		cursor: pointer;
+		
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+
+		&:last-child {
+			margin-right: 7px;
+		}
+
+		&:hover {
+			background-color: rgba($white, 0.1);
+			border-radius: 3px;
+		}
+	}
+
+	&__middle-num {
+		position: absolute;
+		font-size: 10px;
+		line-height: 1.9;
+		color: $red-900;
+		@extend %lato;
+		font-weight: 600;
+		width: 18px;
+		height: 18px;
+		background-color:$white;
+		border-radius: 9px;
+		text-align: center;
+		top: 8px;
+		left: 6px;
+	}
+
+	._icon-icon-del-address {
+		font-size: 25px;
+		position: absolute;
+		top: -3px;
+		left: 0;
+	}
+
+	._icon-icon-tel {
+		font-size: 24px;
+		position: absolute;
+		top: -1px;
+		left: 16px;
+	}
+}

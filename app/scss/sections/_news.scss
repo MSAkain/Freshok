@@ -1,0 +1,33 @@
+.news {
+	padding-bottom: 73px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__link {
+		font-weight: 700;
+		color: $grenn-500;
+		padding-bottom: 6px;
+		border-bottom: 2px solid $grenn-500;
+		text-transform: uppercase;
+		transition: color 0.5s, border-color 0.5s;
+
+		&:hover {
+			color: $hover-link;
+			border-color: $hover-link;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

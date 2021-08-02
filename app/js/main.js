@@ -4,6 +4,12 @@ $(function () {
 		nextArrow: '<button type="button" class="slick-arrow arrow-left"><img src="images/icon/arrow-right.svg" alt="Стрелка влево"></button>'
 	});
 
+	$('.partners__list').slick({
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+
 
 	var containerEl1 = document.querySelector('[data-ref="container-1"]');
 	var containerEl2 = document.querySelector('[data-ref="container-2"]');
