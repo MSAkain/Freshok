@@ -23,16 +23,13 @@
 		border-radius: 4px;
 
 		&:hover {
-			.offers__text {
+			.offers__text,
+			.offers__link {
 				text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 			}
 
 			.offers__title {
 				text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
-			}
-
-			.offers__link {
-				text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 			}
 		}
 	}
@@ -51,7 +48,7 @@
 	}
 
 	&__title {
-		margin-bottom: 12px;
+		margin-bottom: 5px;
 		font-size: 30px;
 		@extend %signika;
 		font-weight: 600;

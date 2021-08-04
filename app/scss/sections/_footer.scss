@@ -32,15 +32,11 @@
 	&__input {
 		max-width: 182px;
 		display: inline-block;
-		width: 100%;
 		margin-top: 13px;
-		background-color: $white;
-		border: none;
 		border-radius: 6px 0 0 6px;
 		padding: 11px 15px;
 		margin-right: -5px;
 		line-height: 18px;
-
 
 		&::placeholder {
 			color: $grey;
@@ -92,24 +88,20 @@
 		}
 	}
 
-	&__info {
+	&__col--adress {
 		display: flex;
 		flex-direction: column;
 		letter-spacing: 0;
+		width: 205px;
 	}
 
-	&__info-box {
-		display: flex;
+	&__contacts {
 		margin-bottom: 18px;
-	}
 
-	&__info-title {
-		margin-right: 12px;
-	}
-
-	&__info-text {
-		margin-bottom: 18px;
-		text-transform: capitalize;
+		a:not(:last-child) {
+			display: block;
+			margin-bottom: 18px;
+		}
 	}
 
 	&__socials {
@@ -118,7 +110,7 @@
 		margin-right: 32px;
 	}
 
-	&__socials-link {
+	.socials__link {
 		width: 100%;
 		height: 100%;
 		svg {
@@ -131,7 +123,8 @@
 
 	&__bottom {
 		border-top: 1px solid rgba($white, 0.1);
-		padding: 24px 0;
+		padding: 18px 0;
+		padding-top: 20px;
 	}
 
 	&__content {

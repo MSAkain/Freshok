@@ -1,4 +1,4 @@
-.nav {	
+.menu {	
 
 	width: 239px;
 	background-color: $white;
@@ -14,7 +14,7 @@
 	&:focus {
 		background-color: $green-100;
 		
-		.nav__list {
+		.menu__list {
 			transform: translateY(-3px);
 		}
 
@@ -56,8 +56,9 @@
 		border-radius: 0 0 6px 6px;
 	}
 
-	&__descr {
+	&__button {
 		text-align: center;
+		width: 100%;
 		padding: 15px;
 		color: $green-900;
 		@extend %lato;

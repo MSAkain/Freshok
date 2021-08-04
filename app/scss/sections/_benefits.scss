@@ -1,5 +1,5 @@
 .benefits {
-
+	
 	background-color: $silver-100;
 	padding: 48px 0;
 
@@ -11,10 +11,11 @@
 
 	&__item {
 		padding-left: 74px;
+		letter-spacing: 0;
 		position: relative;
-		max-width: 275px;
+		max-width: 280px;
 		&:not(:last-child) {
-			margin-right: 50px;
+			margin-right: 38px;
 		}
 
 		&::after {
@@ -37,13 +38,14 @@
 	&__item--cashback {
 		&::after {
 			background-image: url('../images/icon/cashback-icon.svg');
+			left: 4px;
 		}
 	}
 
 	&__item--alltime {
 		&::after {
 			background-image: url('../images/icon/alltime-icon.svg');
-			left: -4px;
+			left: 9px;
 		}
 	}
 
@@ -52,7 +54,6 @@
 		max-width: 201px;
 		margin-bottom: 7px;
 		@extend %lato;
-		font-weight: 700;
 		@include line-clamp (16, 1.4, 1);
 	}
 

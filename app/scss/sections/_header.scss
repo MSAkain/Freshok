@@ -1,7 +1,7 @@
 .header {
 	background-color: $dark-800;
 
-	&__nav {
+	&__top {
 		display: flex;
 		justify-content: space-between;
 		font-size: 13px;
@@ -12,7 +12,7 @@
 		padding: 15px 0;
 	}
 
-	&__links {
+	&__inner {
 		display: flex;
 	}
 
@@ -44,21 +44,20 @@
 		}
 	}
 
-	&__middle {
+	&__nav {
 	background-color: $green-900;
 	padding: 25px 0;
 	}
 
-	&__middle-inner {
+	&__nav-inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	&__middle-form {
+	&__form {
 		position: relative;
 		max-width: 587px;
-		width: 100%;
 		&::after {
 			content: '';
 			position: absolute;
@@ -71,12 +70,10 @@
 		}
 	}
 
-	&__middle-input {
+	&__input {
 		padding: 15px 10px 15px 51px;
 		border-radius: 6px;
-		border: none;
 		max-width: 424px;
-		width: 100%;
 		margin-right: -8px;
 
 		&::placeholder {
@@ -86,11 +83,7 @@
 		}
 	}
 
-	&__bottom-nav {
-		margin-left: -3px;
-	}
-
-	&__middle-button {
+	&__button {
 		background-color: $dark-800;
 		border-radius: 0 6px 6px 0;
 		padding: 13px 25px 14px 25px;	
@@ -116,13 +109,13 @@
 		}
 	}
 
-	&__middle-nav {
+	&__users {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
-	&__middle-item {
+	&__users-item {
 		position: relative;
 		padding: 13px;
 		transition: background-color 0.5s;
@@ -142,7 +135,7 @@
 		}
 	}
 
-	&__middle-num {
+	&__num {
 		position: absolute;
 		font-size: 10px;
 		line-height: 1.9;
