@@ -1,14 +1,17 @@
 @import 'fonts';
 @import 'vars';
+@import 'mixin';
 @import 'libs';
 @import 'reset';
 @import 'global';
-@import 'sections/mixin';
+
 
 
 
 @import 'sections/header';
 @import 'sections/header-nav';
+@import 'sections/header-busket';
+@import 'sections/menu-mobile';
 @import 'sections/top-slider';
 @import 'sections/benefits';
 @import 'sections/product-filters';

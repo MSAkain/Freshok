@@ -3,10 +3,27 @@
 	background-color: $silver-100;
 	padding: 48px 0;
 
+	@include max-width($sm) {
+		padding: 30px 0;
+	}
+
+	@include max-width($mobile) {
+		padding: 20px 0;
+	}
+
+	@include max-height($sm) {
+		padding: 20px 0;
+	}
+
 	&__list {
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@include max-width($sm) {
+			justify-content: end;
+		}
 	}
 
 	&__item {
@@ -16,6 +33,10 @@
 		max-width: 280px;
 		&:not(:last-child) {
 			margin-right: 38px;
+
+			@include max-width($lg) {
+				margin-bottom: 31px;
+			}
 		}
 
 		&::after {
@@ -27,25 +48,39 @@
 			height: 50px;
 			background-repeat: no-repeat;
 		}
-	}
 
-	&__item--moto {
-		&::after {
-			background-image: url('../images/icon/moto-icon.svg');
+		&--moto {
+			&::after {
+				background-image: url('../images/icon/moto-icon.svg');
+			}
 		}
-	}
 
-	&__item--cashback {
-		&::after {
-			background-image: url('../images/icon/cashback-icon.svg');
-			left: 4px;
+		&--cashback {
+			&::after {
+				background-image: url('../images/icon/cashback-icon.svg');
+				left: 4px;
+	
+				@include max-width($md) {
+					left: 0;
+				}
+			}
 		}
-	}
 
-	&__item--alltime {
-		&::after {
-			background-image: url('../images/icon/alltime-icon.svg');
-			left: 9px;
+		&--alltime {
+			&::after {
+				background-image: url('../images/icon/alltime-icon.svg');
+				left: 9px;
+	
+				@include max-width($md) {
+					left: 0;
+				}
+			}
+		}
+
+		@include max-width($md) {
+			max-width: 784px;
+			width: 100%;
+			padding-left: 58px;
 		}
 	}
 
@@ -64,3 +99,4 @@
 		@include line-clamp (14, 1.4, 1);
 	}
 }
+

@@ -32,15 +32,15 @@
 	}	
 
 	&::before {
-		background-image: url('../images/icon/nav-icon.svg');
+		background-image: url('../../images/icon/nav_icon-green.svg');
 		width: 25px;
-		height: 17px;
+		height: 20px;
 		left: 16px;
 		top: 16px;
 	}
 
 	&::after {
-		background-image: url('../images/icon/arrow-down.svg');
+		background-image: url('../../images/icon/arrow-down.svg');
 		width: 8px;
 		height: 7px;
 		top: 22px;
@@ -49,7 +49,7 @@
 
 	&__list {
 		position: absolute;
-		z-index: 11;
+		z-index: 14;
 		transform: translateY(-200%);
 		left: -1px;
 		background-color: $white;
@@ -79,9 +79,34 @@
 			border-left: 3px solid $green-900;
 			color: $green-900;
 		}
+
+		@include max-width($sm) {
+			padding-right: 13px;
+		}
 	}
 
-	._icon-facebook {
-		font-size: 22px;
+	@include max-width($lg) {
+		order: 3;
+	}
+
+	@include max-width($md) {
+		width: 220px;
+	}
+
+	@include max-width($sm) {
+		display: none;
+	}
+}
+
+.menu--mobile {
+	@include max-width($sm) {
+		display: block;
+		order: 0;
+		max-width: 180px;
+		padding: 0;
+	}
+
+	@include max-width($mobile) {
+		max-width: 160px;
 	}
 }

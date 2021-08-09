@@ -1,16 +1,37 @@
 .news {
 	padding-bottom: 73px;
 
+	@include max-width($sm) {
+		padding: 30px 0;
+	}
+
+	@include max-width($mobile) {
+		padding: 20px 0;
+	}
+
+	@include max-height($sm) {
+		padding: 20px 0;
+	}
+
 	&__title {
 		margin-bottom: 35px;
 		line-height: 1;
 		letter-spacing: 2px;
+
+		@include max-width($mobile) {
+			margin-bottom: 12px;
+		}
 	}
 
 	&__box {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@include max-width($mobile) {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__link {
@@ -30,9 +51,26 @@
 	}
 
 	&__list {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-column-gap: 30px;
-		grid-template-rows: 353px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include max-width($xl) {
+			justify-content: space-evenly;
+		}
+	}
+
+	&__item {
+		@include max-width($lg) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@include max-width($sm) {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
 	}
 }

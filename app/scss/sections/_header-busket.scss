@@ -1,0 +1,407 @@
+.basket {
+	position: absolute;
+	background-color: $white;
+	height: 100vh;
+	z-index: 16;
+	right: 0;
+	max-width: 469px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transform: translateY(-200%);
+	transition: transform 0.5s;
+
+	@include max-width($mobile) {
+		height: 450px;
+		top: 119px;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+		padding: 19px 26px 12px 24px;
+
+		@include max-width($mobile) {
+			padding: 8px 26px 8px 24px;
+		}
+
+		@include max-height($iphone5) {
+			padding: 4px 26px 6px 24px;
+		}
+	}
+
+	&__car,
+	&__text {
+		color: $black;
+		font-size: 24px;
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+
+		@include max-width($mobile) {
+			font-size: 14px;
+		}
+	}
+
+	&__text {
+		@include max-height($iphone5) {
+			font-size: 16px;
+		}
+	}
+
+	&__car {
+		margin-bottom: 12px;
+		@include max-width($mobile) {
+			font-size: 18px;
+		}
+
+		@include max-height($iphone5) {
+			font-size: 18px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: 33px;
+		top: 26px;
+
+		@include max-width($mobile) {
+			right: 35px;
+		}
+	}
+
+	&__btn {
+		color: $black;
+		line-height: 1.2;
+	}
+
+	&__body {
+		background-color: $silver-100;
+		min-height: 475px;
+		height: 100%;
+		padding: 12px 11px 12px 11px;
+
+		@include max-width($md) {
+			min-height: 437px;
+		}
+
+		@include max-width($sm) {
+			min-height: 310px;
+		}
+
+		@include max-width($mobile) {
+			min-height: 260px;
+		}
+
+		@include max-height($sm) {
+			min-height: 200px;
+		}
+
+		@include max-height($iphone5) {
+			min-height: 185px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 24px;
+		background-color: $white;
+		margin-top: auto;
+
+		@include max-width($mobile) {
+			padding: 18px 15px;
+		}
+
+		@include max-height($sm) {
+			padding: 18px 15px;
+		}
+
+		@include max-height($sm) {
+			padding: 12px 15px;
+		}
+
+		@include max-height($iphone5) {
+			padding: 2px 15px;
+		}
+	}
+	
+	&__price {
+		color: $dark-500;
+		font-size: 24px;
+		line-height: 1;
+		font-weight: 600;
+
+		span {
+			font-size: 18px;
+		}
+
+		@include max-width($mobile) {
+			font-size: 14px;
+
+			span {
+				font-size: 12px;
+			}
+		}
+
+		@include max-height($iphone5) {
+			font-size: 16px;
+
+			span {
+				font-size: 10px;
+			}
+		}
+	}
+
+	&__button {
+		max-width: 474px;
+		width: 100%;
+		border: none;
+		border-radius: 0;
+		background-color: $grenn-500;
+		color: $white;
+		padding: 22px 0;
+		transition: opacity 0.5s, background-color 0.5s, color 0.5s;
+
+		&:focus {
+			opacity: 0.8;
+		}
+
+		&:hover {
+			background-color: $grenn-300;
+			color: $grenn-500
+		}
+
+		&:active {
+			background-color: $orange-900;
+		}
+
+		@include max-width($mobile) {
+			padding: 12px 0;
+		}
+
+		@include max-height($sm) {
+			padding: 10px 0;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		
+
+		@include max-width($md) {
+			&:not(:last-child) {
+				margin-bottom: 62px;
+			}
+		}
+
+		@include max-height($sm) {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+
+
+
+
+	.product-card__link {
+		height: 100%;
+		height: 84px;
+		max-width: 452px;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: start;
+		padding: 12px;
+
+		@include max-width($md) {
+			height: 135px;
+		}
+
+		@include max-width($mobile) {
+			align-items: start;
+		}
+
+		@include max-height($sm) {
+			height: 84px;
+		}
+	}
+
+	.product-card {
+		height: 84px;
+	}
+
+	.product-card__offers {
+		margin-top: auto;
+		justify-content: start;
+	}
+
+	.product-card__img {
+		width: 80px;
+		height: 74px;
+		object-fit: cover;
+		margin-right: 17px;
+	}
+
+	.product-card__price {
+		color: $dark-500;
+		font-size: 20px;
+	}
+
+	.product-card__descr {
+		margin-bottom: 5px;
+	}
+
+	.product-card__right {
+		display: flex;
+		margin-top: auto;
+		margin-left: auto;
+	}
+
+	.product-card__input {
+		margin-right: 36px;
+
+		@include max-width($mobile) {
+			position: absolute;
+			left: 38px;
+			bottom: 35px;
+		}
+	}
+
+	.product-card__final-cost {
+		color: $dark-500;
+		font-size: 20px;
+		span {
+			font-size: 14px;
+		}
+	}
+
+	.product-card-close {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+	}
+
+	.jq-number__field {
+		width: 36px;
+		border-radius: 0;
+		background: rgba(99, 166, 14, 0.1);
+		box-shadow: none;
+		transform: translateY(1px);
+		border: none;
+	}
+	
+	.jq-number__field input {
+		border: none;
+		height: 26px;
+		background: none;
+		text-align: center;
+		padding: 8px 9px;
+		width: 100%;
+		color: $dark-500;
+		font-size: 16px;
+		line-height: 1;
+		letter-spacing: 0.03em;
+		@extend %lato;
+		font-weight: 400;
+	}
+	
+	.jq-number {
+		padding-right: 0;
+	}
+	
+	.jq-number__spin {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 24px;
+		width: 24px;
+		height: 26px;
+		border: none;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		text-shadow: none;
+		cursor: pointer;
+		background-color: $grenn-500;
+	
+		&:hover {
+			background: none;
+		}
+	}
+	
+	.jq-number__spin::after {
+		color: $white;
+		background-color: $grenn-500;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 4px;
+		width: 16px;
+		height: 2px;
+		border: none;
+		border-right: none;
+		border-top: none;
+		border-left: none;
+	}
+	
+	.jq-number__spin.plus::before {
+		content: '';
+		position: absolute;
+		width: 2px;
+		height: 16px;
+		background-color: $white;
+		right: 11px;
+		top: 5px;
+	}
+	
+	.jq-number__spin.minus {
+		left: -24px;
+		top: 14px;
+		color: $white;
+	
+		&:hover {
+			background-color: $grenn-600;
+		}
+	}
+	
+	.jq-number__spin.plus {
+		right: -24px;
+		top: 14px;
+		color: $white;
+	
+		&:hover {
+			background-color: $grenn-600;
+		}
+	}
+	
+	.jq-number__spin.minus::after {
+		border: none;
+		border-right: none;
+		border-top: none;
+		border-left: none;
+		right: 0;
+		top: 12px;
+		background-color: $white;
+	}
+	
+	.jq-number__spin.plus::after {
+		border: none;
+		border-right: none;
+		border-top: none;
+		border-left: none;
+		left: 4px;
+		background-color: $white;
+		top: 12px;
+	}
+}
+
+.basket--active {
+	transform: translateY(0);
+}

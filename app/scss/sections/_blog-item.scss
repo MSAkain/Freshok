@@ -2,8 +2,19 @@
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
 	position: relative;
 	border-radius: 6px;
-	width: 100%;
-	height: 100%;
+	width: 410px;
+	min-height: 353px;
+
+	@include max-width($xl) {
+		width: 345px;
+		min-height: 320px;
+	}
+
+	@include max-width($mobile) {
+		min-height: 290px;
+		width: 310px;
+		max-width: 100%;
+	}
 
 	&:hover {
 		.news-card__heading {
@@ -15,6 +26,12 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
+	}
+
+	&__img {
+		@include max-width($mobile) {
+			height: 200px;
+		}
 	}
 	
 
@@ -50,6 +67,11 @@
 		&__body {
 			padding: 18px;
 			padding-right: 12px;
+
+			@include max-width($xl) {
+				padding-bottom: 0;
+				padding: 12px;
+			}
 		}
 
 		&__heading {
@@ -58,5 +80,10 @@
 			font-weight: 600;
 			transition: color 0.5s;
 			@include line-clamp(18, 1.4, 3);
+
+			@include max-width($mobile) {
+				font-size: 14px;
+				font-weight: 700;
+			}
 		}
 }

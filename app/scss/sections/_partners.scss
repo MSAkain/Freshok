@@ -4,19 +4,89 @@
 		cursor: pointer;
 		transition: opacity 0.5s;
 		opacity: 0.5;
-
+		
+		
 		&:hover {
 			opacity: 1;
 		}
 	}
 
-	&__list {
-		padding: 73px 0;
+	&__item--sprite {
+		margin-right: 162px;
+		margin-top: 10px;
+
+		@include max-width($lg) {
+			margin-right: 0;
+		}
+
+		@include max-width($md) {
+			margin-right: 100px;
+		}
 	}
 
-	&__slide {
+	&__item--cola {
+		margin-left: 54px;
+		margin-top: 12px;
+		margin-right: 162px;
+
+		@include max-width($lg) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		@include max-width($md) {
+			margin-right: 100px;
+		}
+	}
+
+	&__item--pepsi {
+		margin-top: 10px;
+	}
+
+	&__item--redbull {
+		margin-left: 108px;
+		margin-right: 162px;
+
+		@include max-width($lg) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@include max-width($md) {
+			margin-right: 100px;
+		}
+	}
+
+	&__list {
+		padding: 73px 0;
+
+		@include max-width($sm) {
+			padding: 30px 0;
+		}
+	
+		@include max-width($mobile) {
+			padding: 20px 0;
+		}
+	
+		@include max-height($sm) {
+			padding: 20px 0;
+		}
+	}
+
+	&__box {
 		display: flex !important;
-		justify-content: space-between;
-		align-items: center;
+
+		@include max-width($xl) {
+			justify-content: space-evenly;
+		}
+
+		@include max-width($md) {
+			justify-content: center;
+		}
+	}
+
+	.partners__list {
+		display: flex !important;
+		justify-content: center;
 	}
 }
