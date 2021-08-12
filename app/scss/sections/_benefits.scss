@@ -2,27 +2,38 @@
 	
 	background-color: $silver-100;
 	padding: 48px 0;
+	margin-bottom: 72px;
 
 	@include max-width($sm) {
 		padding: 30px 0;
+		margin-bottom: 30px;
 	}
 
 	@include max-width($mobile) {
 		padding: 20px 0;
+		margin-bottom: 20px;
 	}
 
 	@include max-height($sm) {
 		padding: 20px 0;
+		margin-bottom: 20px;
 	}
 
 	&__list {
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		flex-wrap: wrap;
+
+		@include max-width($md) {
+			justify-content: end;
+		}
+
+		@include max-height($inpone7) {
+			display: block;
+		}
 
 		@include max-width($sm) {
-			justify-content: end;
+			flex-wrap: wrap;
 		}
 	}
 
@@ -35,7 +46,19 @@
 			margin-right: 38px;
 
 			@include max-width($lg) {
-				margin-bottom: 31px;
+				margin-bottom: 0;
+			}
+
+			@include max-width($iphone8) {
+				margin-bottom: 32px;
+			}
+
+			@include max-height($sm) {
+				margin-bottom: 32px;
+			}
+
+			@include max-width($iphone10) {
+				margin-right: 10px;
 			}
 		}
 
@@ -63,6 +86,10 @@
 				@include max-width($md) {
 					left: 0;
 				}
+
+				@include max-height($inpone7) {
+					left: 0;
+				}
 			}
 		}
 
@@ -70,8 +97,12 @@
 			&::after {
 				background-image: url('../images/icon/alltime-icon.svg');
 				left: 9px;
+
+				@include max-width($inpone7) {
+					left: 0;
+				}
 	
-				@include max-width($md) {
+				@include max-height($inpone7) {
 					left: 0;
 				}
 			}
@@ -86,7 +117,6 @@
 
 	&__title {
 		font-size: 16px;
-		max-width: 201px;
 		margin-bottom: 7px;
 		@extend %lato;
 		@include line-clamp (16, 1.4, 1);
@@ -94,7 +124,6 @@
 
 	&__text {
 		color: $dark-500;
-		min-width: 211px;
 		width: 100%;
 		@include line-clamp (14, 1.4, 1);
 	}

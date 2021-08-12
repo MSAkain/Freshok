@@ -9,13 +9,18 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	transform: translateY(-200%);
+	transform: translateY(-251%);
 	transition: transform 0.5s;
 
 	@include max-width($mobile) {
 		height: 450px;
 		top: 119px;
 	}
+
+	&--active {
+		transform: translateY(0);
+	}
+	
 
 	&__top {
 		display: flex;
@@ -78,28 +83,36 @@
 
 	&__body {
 		background-color: $silver-100;
-		min-height: 475px;
-		height: 100%;
 		padding: 12px 11px 12px 11px;
+		overflow: auto;
 
-		@include max-width($md) {
-			min-height: 437px;
+		@include max-width($xl) {
+			min-height: 740px;
 		}
 
-		@include max-width($sm) {
-			min-height: 310px;
+		@include max-height-2($ipad-vertical) {
+			min-height: 740px;
 		}
 
-		@include max-width($mobile) {
-			min-height: 260px;
+		@include max-height-2($iphone10) {
+			min-height: 580px;
 		}
 
-		@include max-height($sm) {
-			min-height: 200px;
+		@include max-height($md) {
+			min-height: 534px;
 		}
 
-		@include max-height($iphone5) {
-			min-height: 185px;
+		@include max-height-2($iphone8) {
+			min-height: 505px;
+		}
+
+		@include max-height-2($ipad) {
+			min-height: 436px;
+		}
+
+		@include max-width($iphone5) {
+			min-height: 298px;
+			padding-top: 7px;
 		}
 	}
 
@@ -109,7 +122,6 @@
 		align-items: flex-end;
 		padding: 24px;
 		background-color: $white;
-		margin-top: auto;
 
 		@include max-width($mobile) {
 			padding: 18px 15px;
@@ -185,6 +197,10 @@
 		@include max-height($sm) {
 			padding: 10px 0;
 		}
+
+		@include max-width($iphone5) {
+			padding: 6px 0;
+		}
 	}
 
 	&__item {
@@ -192,13 +208,6 @@
 			margin-bottom: 12px;
 		}
 		
-
-		@include max-width($md) {
-			&:not(:last-child) {
-				margin-bottom: 62px;
-			}
-		}
-
 		@include max-height($sm) {
 			&:not(:last-child) {
 				margin-bottom: 12px;
@@ -206,86 +215,98 @@
 		}
 	}
 
-
-
-
-
-	.product-card__link {
-		height: 100%;
-		height: 84px;
-		max-width: 452px;
-		width: 100%;
-		flex-direction: row;
-		align-items: center;
-		justify-content: start;
-		padding: 12px;
-
-		@include max-width($md) {
-			height: 135px;
-		}
-
-		@include max-width($mobile) {
-			align-items: start;
-		}
-
-		@include max-height($sm) {
-			height: 84px;
-		}
-	}
-
 	.product-card {
-		height: 84px;
-	}
 
-	.product-card__offers {
-		margin-top: auto;
-		justify-content: start;
-	}
+		&--basket {
 
-	.product-card__img {
-		width: 80px;
-		height: 74px;
-		object-fit: cover;
-		margin-right: 17px;
-	}
+			.product-card {
+				height: 84px;
 
-	.product-card__price {
-		color: $dark-500;
-		font-size: 20px;
-	}
-
-	.product-card__descr {
-		margin-bottom: 5px;
-	}
-
-	.product-card__right {
-		display: flex;
-		margin-top: auto;
-		margin-left: auto;
-	}
-
-	.product-card__input {
-		margin-right: 36px;
-
-		@include max-width($mobile) {
-			position: absolute;
-			left: 38px;
-			bottom: 35px;
+				&__link {
+					height: 100%;
+					height: 84px;
+					max-width: 452px;
+					width: 100%;
+					flex-direction: row;
+					align-items: center;
+					justify-content: start;
+					padding: 12px;
+		
+					@include max-width($lg) {
+						height: 135px;
+					}
+		
+					@include max-width($mobile) {
+						align-items: start;
+					}
+		
+					@include max-height($sm) {
+						height: 84px;
+					}
+				}
+		
+				&__offers {
+					margin-top: auto;
+					justify-content: start;
+				}
+		
+				&__img {
+					width: 80px;
+					height: 74px;
+					object-fit: cover;
+					margin-right: 17px;
+		
+					@include max-width($lg) {
+						margin-bottom: 42px;
+					}
+				}
+		
+				&__price {
+					color: $dark-500;
+					font-size: 20px;
+				}
+		
+				&__descr {
+					margin-bottom: 5px;
+					@include line-clamp(14, 1.4, 2);
+				}
+		
+				&__right {
+					display: flex;
+					margin-top: auto;
+					margin-left: auto;
+				}
+		
+				&__input {
+					margin-right: 36px;
+		
+					@include max-width($lg) {
+						position: absolute;
+						left: 37px;
+						bottom: 39px;
+		
+						input {
+							top: -1px;
+							left: 0px;
+						}
+					}
+				}
+		
+				&__sum {
+					color: $dark-500;
+					font-size: 20px;
+					span {
+						font-size: 14px;
+					}
+				}
+		
+				&__close {
+					position: absolute;
+					right: 12px;
+					top: 12px;
+				}	
+			}
 		}
-	}
-
-	.product-card__final-cost {
-		color: $dark-500;
-		font-size: 20px;
-		span {
-			font-size: 14px;
-		}
-	}
-
-	.product-card-close {
-		position: absolute;
-		right: 12px;
-		top: 12px;
 	}
 
 	.jq-number__field {
@@ -402,6 +423,3 @@
 	}
 }
 
-.basket--active {
-	transform: translateY(0);
-}

@@ -18,6 +18,10 @@
 		@include max-width($sm) {
 			height: 320px;
 		}
+
+		@include max-height($inpone7) {
+			height: 320px;
+		}
 	}
 
 	&__title {

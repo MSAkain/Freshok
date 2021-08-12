@@ -3,17 +3,17 @@
 	position: relative;
 	border-radius: 6px;
 	width: 410px;
-	min-height: 353px;
+	padding-bottom: 352px;
 
-	@include max-width($xl) {
+	@include max-width($inpone7) {
 		width: 345px;
-		min-height: 320px;
+		padding-bottom: 310px;
 	}
 
-	@include max-width($mobile) {
-		min-height: 290px;
+	@include max-width($iphone5) {
 		width: 310px;
 		max-width: 100%;
+		padding-bottom: 270px;
 	}
 
 	&:hover {

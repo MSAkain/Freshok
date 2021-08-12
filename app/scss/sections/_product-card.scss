@@ -1,7 +1,5 @@
 .top-products {
 
-	margin: 72px 0;
-
 	@include max-width($sm) {
 		margin: 30px 0;
 	}
@@ -52,16 +50,14 @@
 
 		@include max-width($sm) {
 			grid-template-columns: repeat(2, 170px);
-		}
-
-		@include max-width($sm) {
-			grid-template-columns: repeat(2, 150px);
-			gap: 5px;
+			gap: 8px;
 			margin-bottom: 24px;
 		}
 
 		@include max-width($mobile) {
+			grid-template-columns: repeat(2, 150px);
 			margin-bottom: 24px;
+			grid-template: 5px;
 		}
 	
 		@include max-height($sm) {
@@ -69,10 +65,6 @@
 		}
 	}
 }
-
-
-
-
 
 
 
@@ -104,8 +96,12 @@
 		}
 
 		@include max-width($sm) {
-			width: 150px;
+			width: 170px;
 			height: 290px;
+		}
+
+		@include max-width($mobile) {
+			width: 150px;
 		}
 	}
 

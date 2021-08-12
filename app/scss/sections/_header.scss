@@ -9,13 +9,12 @@
 		font-weight: 700;
 		color: $white;
 		text-transform: uppercase;
-		padding: 15px 0;
+		padding: 16px 0;
 
 		@include max-width($md) {
 			height: 50px;
 			justify-content: space-between;
 			align-items: end;
-			padding: 16px 0;
 		}
 	}
 
@@ -105,6 +104,10 @@
 	background-color: $green-900;
 	padding: 25px 0;
 
+	@include max-width($iphone10) {
+		padding: 15px 0;
+	}
+
 	@include max-width($sm) {
 		padding: 9px 0;
 		}
@@ -150,7 +153,11 @@
 			margin-top: 15px;
 		}
 
-		@include max-width($sm) {
+		@include max-width($md) {
+			display: none;
+		}
+
+		@include max-height($iphone10) {
 			display: none;
 		}
 	}
@@ -160,6 +167,8 @@
 		border-radius: 6px;
 		max-width: 424px;
 		margin-right: -8px;
+		max-width: 430px;
+		width: 100%;
 
 		&::placeholder {
 			color: $dark-800;
@@ -185,7 +194,6 @@
 		border-radius: 0 6px 6px 0;
 		padding: 13px 25px 14px 25px;	
 		color: $white;
-		border: none;
 		font-weight: 600;
 		max-width: 160px;
 		display: inline-block;
@@ -223,7 +231,11 @@
 		justify-content: center;
 		align-items: center;
 
-		@include max-width($sm) {
+		@include max-width($md) {
+			display: none;
+		}
+
+		@include max-height($iphone10) {
 			display: none;
 		}
 	}

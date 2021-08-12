@@ -5,18 +5,18 @@
 	padding-top: 30px;
 	letter-spacing: 1px;
 
-	@include max-width($sm) {
+	@include max-width($lg) {
 		padding-top: 24px;
 	}
 
 	.container {
-		@include max-width($sm) {
+		@include max-width($lg) {
 			padding: 0;
 		}
 	}
 
 	.logo {
-		@include max-width($sm) {
+		@include max-width($lg) {
 			display: block;
 		}
 	}
@@ -25,7 +25,7 @@
 		margin-bottom: 26px;
 		display: inline-block;
 
-		@include max-width($md) {
+		@include max-width($lg) {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -39,7 +39,7 @@
 		padding-bottom: 26px;
 		flex-wrap: wrap;
 
-		@include max-width($md) {
+		@include max-width($lg) {
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: center;
@@ -47,11 +47,11 @@
 	}
 
 	&__col--form {
-		@include max-width($md) {
+		@include max-width($lg) {
 			margin-bottom: 26px;
 		}
 
-		@include max-width($sm) {
+		@include max-width($lg) {
 			order: 3;
 			padding: 24px 0;
 			margin-bottom: 0;
@@ -113,15 +113,15 @@
 	&__col--links {
 		max-width: 469px;
 		
-		@include max-width($md) {
+		@include max-width($lg) {
 			margin-bottom: 26px;
 		}
 
-		@include max-width($sm) {
+		@include max-width($lg) {
 			order: 2;
 			padding: 24px 0;
 			width: 100%;
-			max-width: 576px;
+			max-width: 1024px;
 			border-top: 1px solid rgba($white, 0.1);
 			border-bottom: 1px solid rgba($white, 0.1);
 			margin-bottom: 0;
@@ -134,7 +134,7 @@
 		grid-column-gap: 30px;
 		grid-row-gap: 20px;
 
-		@include max-width($sm) {
+		@include max-width($lg) {
 			grid-template-columns: 139px 60px;
 			text-align: left;
 			grid-column-gap: 57px;
@@ -165,7 +165,7 @@
 	}
 
 	&__item {
-		@include max-width($sm) {
+		@include max-width($lg) {
 
 		&:nth-child(1) {
 			order: 0;
@@ -206,7 +206,7 @@
 		letter-spacing: 0;
 		width: 205px;
 
-		@include max-width($sm) {
+		@include max-width($lg) {
 			order: 1;
 			margin-bottom: 24px;
 		}
@@ -241,7 +241,7 @@
 		justify-content: space-around;
 		margin-right: 32px;
 
-		@include max-width($sm) {
+		@include max-width($lg) {
 			margin-right: 18px;
 		}
 	}
@@ -258,7 +258,7 @@
 		border-top: 1px solid rgba($white, 0.1);
 		padding: 22px;
 
-		@include max-width($sm) {
+		@include max-width($lg) {
 			padding: 24px;
 		}
 	}
@@ -268,14 +268,14 @@
 		justify-content: space-between;
 		align-items: center;
 
-		@include max-width($sm) {
+		@include max-width($lg) {
 			flex-wrap: wrap;
 			justify-content: center;
 		}
 	}
 
 	&__copyright {
-		@include max-width($sm) {
+		@include max-width($lg) {
 			order: 2;
 			width: 100%;
 			text-align: center;
@@ -283,7 +283,7 @@
 	}
 
 	&__pays {
-		@include max-width($sm) {
+		@include max-width($lg) {
 			order: 1;
 			margin-bottom: 24px;
 		}

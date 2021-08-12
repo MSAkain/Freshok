@@ -1,4 +1,9 @@
 .partners {
+
+	&__list {
+		display: flex !important;
+		justify-content: center;
+	}
 	
 	&__item {
 		cursor: pointer;
@@ -9,9 +14,9 @@
 		&:hover {
 			opacity: 1;
 		}
-	}
+	
 
-	&__item--sprite {
+	&--sprite {
 		margin-right: 162px;
 		margin-top: 10px;
 
@@ -24,7 +29,7 @@
 		}
 	}
 
-	&__item--cola {
+	&--cola {
 		margin-left: 54px;
 		margin-top: 12px;
 		margin-right: 162px;
@@ -39,11 +44,11 @@
 		}
 	}
 
-	&__item--pepsi {
+	&--pepsi {
 		margin-top: 10px;
 	}
 
-	&__item--redbull {
+	&--redbull {
 		margin-left: 108px;
 		margin-right: 162px;
 
@@ -56,6 +61,7 @@
 			margin-right: 100px;
 		}
 	}
+}
 
 	&__list {
 		padding: 73px 0;
@@ -83,10 +89,5 @@
 		@include max-width($md) {
 			justify-content: center;
 		}
-	}
-
-	.partners__list {
-		display: flex !important;
-		justify-content: center;
 	}
 }

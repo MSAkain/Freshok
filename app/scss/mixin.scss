@@ -14,16 +14,14 @@
 	-webkit-line-clamp: $lines-to-show;
 }
 
-
-$xl: 1300;
-$lg: 1050;
-$md: 785;
-$sm: 576;
-$mobile: 374;
-$iphone5: 320;
-
 @mixin max-width($width) {
 	@media only screen and (max-width: $width + "px") {
+		@content;
+	}
+}
+
+@mixin max-height-2($height) {
+	@media only screen and (max-height: $height + "px") {
 		@content;
 	}
 }

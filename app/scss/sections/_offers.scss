@@ -1,16 +1,20 @@
 .offers {
 	padding-top: 72px;
+	margin-bottom: 72px;
 	
 	@include max-width($sm) {
-		padding: 30px 0;
+		padding-top: 30px;
+		margin-bottom: 30px;
 	}
 
 	@include max-width($mobile) {
-		padding: 20px 0;
+		padding-top: 20px;
+		margin-bottom: 20px;
 	}
 
 	@include max-height($sm) {
-		padding: 20px 0;
+		padding-top: 20px;
+		margin-bottom: 20px;
 	}
 	
 	&__list {
@@ -29,8 +33,10 @@
 			gap: 15px;
 		}
 
-		@include max-width($lg) {
-			grid-template-columns: 335px;
+		@include max-width($iphone10) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 
 		@include max-width($sm) {
@@ -66,6 +72,32 @@
 
 		&--white {
 			color: $white;
+		}
+
+		@include max-width($iphone10) {
+			width: 100%;
+			padding-right: 26px;
+
+			&:nth-child(1) {
+				background-image: url('../../images/offers-m-1.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 38%;
+			}
+
+			&:nth-child(2) {
+				background-image: url('../../images/offers-m-2.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 100%;
+			}
+
+			&:nth-child(3) {
+				background-image: url('../../images/offers-m-3.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 97%;
+			}
 		}
 	}
 

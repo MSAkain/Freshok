@@ -1,6 +1,22 @@
 .form--mobile.form--active {
 
+	@include max-width($md) {
+		transform: translateY(44%);
+	}
+
 	@include max-width($sm) {
+		transform: translateY(0);
+	}
+
+	@include max-height($iphone10) {
+		transform: translateY(80%);
+	}
+
+	@include max-height($inpone7) {
+		transform: translateY(45%);
+	}
+
+	@include max-height($iphone5) {
 		transform: translateY(0);
 	}
 }
@@ -8,7 +24,14 @@
 .header__mobile {
 	display: none;
 
-	@include max-width($sm) {
+	@include max-width($md) {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+
+	@include max-height($iphone10) {
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
@@ -25,14 +48,13 @@
 	}
 }
 
-.menu-mobile {
+.mobile {
 	position: absolute;
-	border: 1px solid $black;
 	left: 0;
 	top: 0;
 	display: block;
 	z-index: 20;
-	height: 741px;
+	height: 100vh;
 	width: 300px;
 	background-color: $white;
 	padding: 10px 0;
@@ -45,6 +67,11 @@
 			display: block;
 			object-fit: cover;
 		}
+
+		@include max-height($iphone10) {
+			display: block;
+			object-fit: cover;
+		}
 	}
 
 	&__top {
@@ -52,10 +79,18 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 26px 26px 26px 15px;
+
+		@include max-width($iphone5) {
+			padding: 3px 26px 6px 15px;
+		}
 	}
 
 	&__links {
 		margin-bottom: 24px;
+
+		@include max-width($iphone5) {
+			margin-bottom: 7px;
+		}
 	}
 
 	&__ref {
@@ -89,6 +124,10 @@
 		padding-right: 20px;
 		padding-bottom: 24px;
 		border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+
+		@include max-width($iphone5) {
+			padding-bottom: 7px;
+		}
 	}
 
 	&__socials {
@@ -115,13 +154,13 @@
 		}
 	}
 
-	.menu-mobile--tel,
-	.menu-mobile--point {
+	&__tel,
+	&__point {
 		margin-left: 39px;
 	}
 
-	&--tel,
-	&--point {
+	&__tel,
+	&__point {
 		&::after{
 			content: '';
 			position: absolute;
@@ -132,14 +171,14 @@
 		}
 	}
 
-	&--tel {
+	&__tel {
 		&::after {
 			background-image: url('../../images/icon/tel-icon-black.svg');
 			height: 23px;
 		}
 	}
 
-	&--point {
+	&__point {
 		&::after {
 			background-image: url('../../images/icon/point.svg');
 			height: 32px;
@@ -149,10 +188,26 @@
 
 	&__bottom {
 		padding: 24px 84px 24px 36px;
+
+		@include max-width($iphone5) {
+			padding: 5px 84px 6px 36px;
+		}
 	}
 
 	&__item {
 		margin-bottom: 15px;
+
+		@include max-width($sm) {
+			margin-bottom: 13px;
+		}
+
+		@include max-width($inphone6) {
+			margin-bottom: 5px;
+		}
+
+		@include max-width($iphone5) {
+			margin-bottom: 3px;
+		}
 	}
 
 	&__link {
@@ -177,36 +232,70 @@
 	}
 }
 
-.menu-mobile.menu-mobile--active {
+.mobile.mobile--active {
 	transform: translateX(0);
 }
 
 .logo {
-	@include max-width($sm) {
+	@include max-width($md) {
+		display: none;
+	}
+
+	@include max-height($iphone10) {
 		display: none;
 	}
 }
 
 .logo--mobile {
-	@include max-width($sm) {
+	@include max-width($md) {
 		display: block;
+		margin-right: 12px;
+	}
+
+	@include max-height($iphone10) {
+		display: block;
+		margin-right: 12px;
 	}
 }
 
 .form--mobile {
-	@include max-width($sm) {
+	@include max-width($md) {
 		display: flex;
 		position: absolute;
 		margin-top: 0;
 		top: 118px;
 		z-index: 11;
 		max-width: 576px;
-		transform: translateY(-340%);
+		transform: translateY(-440%);
 		transition: transform 0.5s;
 	}
 
+	@include max-height($iphone10) {
+		display: flex;
+		position: absolute;
+		margin-top: 0;
+		top: 118px;
+		z-index: 11;
+		max-width: 576px;
+		transform: translateY(-440%);
+		transition: transform 0.5s;
+	}
+
+	@include max-width($sm) {
+		top: 118px;
+		z-index: 11;
+		max-width: 576px;
+		transform: translateY(-340%);
+	}
+
 	.header__input {
-		@include max-width($sm) {
+		@include max-width($md) {
+			max-width: 402px;
+			border-radius: 0;
+			border: 1px solid $dark-800;
+		}
+
+		@include max-height($iphone10) {
 			max-width: 402px;
 			border-radius: 0;
 			border: 1px solid $dark-800;
@@ -214,7 +303,13 @@
 	}
 
 	.header__button {
-		@include max-width($sm) {
+		@include max-width($md) {
+			max-width: 185px;
+			border-radius: 0;
+			font-size: 14px;
+		}
+
+		@include max-height($iphone10) {
 			max-width: 185px;
 			border-radius: 0;
 			font-size: 14px;

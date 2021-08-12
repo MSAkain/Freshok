@@ -2,15 +2,19 @@
 	padding-bottom: 73px;
 
 	@include max-width($sm) {
-		padding: 30px 0;
+		padding-bottom: 30px;
 	}
 
 	@include max-width($mobile) {
-		padding: 20px 0;
+		padding-bottom: 20px;
+	}
+
+	@include max-height($iphone10) {
+		padding-bottom: 30px;
 	}
 
 	@include max-height($sm) {
-		padding: 20px 0;
+		padding-bottom: 20px;
 	}
 
 	&__title {
@@ -18,7 +22,9 @@
 		line-height: 1;
 		letter-spacing: 2px;
 
-		@include max-width($mobile) {
+		@include max-width($sm) {
+			display: flex;
+			justify-content: end;
 			margin-bottom: 12px;
 		}
 	}
@@ -29,8 +35,8 @@
 		align-items: flex-start;
 		flex-wrap: wrap;
 
-		@include max-width($mobile) {
-			margin-bottom: 24px;
+		@include max-width($sm) {
+			display: block;
 		}
 	}
 
@@ -48,6 +54,11 @@
 			color: $hover-link;
 			border-color: $hover-link;
 		}
+
+		@include max-width($sm) {
+			display: inline-block;
+			margin-bottom: 16px;
+		}
 	}
 
 	&__list {
@@ -55,8 +66,8 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 
-		@include max-width($xl) {
-			justify-content: space-evenly;
+		@include max-width($lg) {
+			justify-content: center;
 		}
 	}
 
@@ -67,7 +78,22 @@
 			}
 		}
 
+		@include max-width($md) {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@include max-height($iphone10) {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
 		@include max-width($sm) {
+			width: 300px;
 			&:not(:last-child) {
 				margin-bottom: 15px;
 			}
