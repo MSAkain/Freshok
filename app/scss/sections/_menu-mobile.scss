@@ -173,14 +173,14 @@
 
 	&__tel {
 		&::after {
-			background-image: url('../../images/icon/tel-icon-black.svg');
+			background-image: url('../images/icon/tel-icon-black.svg');
 			height: 23px;
 		}
 	}
 
 	&__point {
 		&::after {
-			background-image: url('../../images/icon/point.svg');
+			background-image: url('../images/icon/point.svg');
 			height: 32px;
 			bottom: 9px;
 		}

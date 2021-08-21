@@ -1,0 +1,186 @@
+.catalog-content {
+	max-width: 963px;
+	width: 100%;
+	margin-bottom: 72px;
+
+	@include max-width($ipad-vertical) {
+		margin-bottom: 24px;
+	}
+
+	@include max-width($md) {
+		justify-content: center;
+	}
+
+	&__filter {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 43px;
+
+		@include max-width($ipad-vertical) {
+			margin-bottom: 30px;
+		}
+
+		@include max-width($lg) {
+			justify-content: start;
+		}
+
+		@include max-width($inpone7) {
+			display: block;
+		}
+		
+		
+		button {
+
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+
+
+		.select2 {
+			margin-right: 15px;
+
+			@include max-width($mobile) {
+				margin-right: 5px;
+			}
+		}
+
+		.select2-container--default .select2-selection--single {
+			height: 47px !important;
+		}
+
+		.select2-container--default .select2-selection--single .select2-selection__rendered {
+			line-height: 47px;
+			padding-left: 15px;
+			font-size: 14px;
+			color: $dark-500;
+		}
+
+		.select2-container--default .select2-selection--single .select2-selection__arrow  {
+			top: 9px;
+			right: 13px;
+		}
+
+		.select2-container--default .select2-selection--single .select2-selection__arrow b {
+			border-width: 0;
+			border-style: none;
+			background-image: url('../../images/icon/chevron-right.svg');
+			width: 16px;
+			height: 11px;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__open-filters {
+		display: none;
+
+		@include max-width($ipad-vertical) {
+			display: block;
+		}
+		@include max-width($inpone7) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__button--two-columns,
+	&__button--three-columns {
+		path {
+			transition: fill 0.5s;
+		}
+	}
+
+	&__btns {
+		@include max-width($lg) {
+			display: none;
+		}
+	}
+
+	&__form {
+		@include max-width($mobile) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	
+	.catalog-content__button--active {
+		path {
+			fill: $grenn-500;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		margin-bottom: 48px;
+		transition: all 0.5s;
+
+		@include max-width($xl) {
+			grid-template-columns: repeat(2, 300px);
+			justify-content: center;
+		}
+
+		@include max-width($ipad-vertical) {
+			margin-bottom: 24px;
+		}
+
+		@include max-width($ipad) {
+			grid-template-columns: repeat(2, 170px);
+		}
+
+		@include max-width($sm) {
+			gap: 10px;
+		}
+
+		@include max-width($inphone6) {
+			gap: 5px;
+		}
+
+		@include max-width($mobile) {
+			grid-template-columns: repeat(2, 150px);
+		}
+	}
+
+	.two-columns {
+		grid-template-columns: repeat(2, 1fr);
+
+		@include max-width($xl) {
+			grid-template-columns: repeat(1, 466px);
+			justify-content: center;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@include max-width($lg) {
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		background-color: $grenn-500;
+		color: $white;
+
+		&:hover {
+			background-color: $grenn-600;
+		}
+
+		&:active {
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		&:focus {
+			box-shadow: 0px 0px 0px 4px $green-200;
+		}
+
+		@include max-width($lg) {
+			order: 1;
+			margin-bottom: 24px;
+		}
+	}
+}

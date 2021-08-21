@@ -7,7 +7,8 @@
 
 
 
-
+@import 'sections/breadcrumbs';
+@import 'sections/catalog';
 @import 'sections/header';
 @import 'sections/header-nav';
 @import 'sections/header-busket';
@@ -21,5 +22,12 @@
 @import 'sections/partners';
 @import 'sections/news';
 @import 'sections/blog-item';
+@import 'sections/filter';
+@import 'sections/catalog-content';
+@import 'sections/product-page';
+@import 'sections/slider-popup';
+@import 'sections/about';
+@import 'sections/recent';
+@import 'sections/product-card-catalog';
 @import 'sections/footer';
 

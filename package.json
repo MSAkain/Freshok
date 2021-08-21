@@ -9,6 +9,7 @@
 	"author": "Anton",
 	"license": "ISC",
 	"devDependencies": {
+		"aos": "^2.3.4",
 		"browser-sync": "^2.27.4",
 		"del": "^6.0.0",
 		"gulp": "^4.0.2",
@@ -17,9 +18,11 @@
 		"gulp-imagemin": "^7.1.0",
 		"gulp-sass": "^5.0.0",
 		"gulp-uglify": "^3.0.2",
+		"ion-rangeslider": "^2.3.1",
 		"jquery": "^3.6.0",
 		"mixitup": "^3.3.1",
 		"sass": "^1.35.2",
+		"select2": "^4.1.0-rc.0",
 		"slick-carousel": "^1.8.1"
 	},
 	"dependencies": {

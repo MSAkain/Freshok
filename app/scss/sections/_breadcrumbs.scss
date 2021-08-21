@@ -1,0 +1,33 @@
+.top {
+	background-color: $silver-100;
+	padding: 24px 0;
+	margin-bottom: 42px;
+}
+
+.breadcrumbs {
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		position: relative;
+		color: $dark-500;
+		
+		&:not(:last-child) {
+			padding-right: 8px;
+			margin-right: 8px;
+			&::before {
+				content: '';
+				position: absolute;
+				background-image: url('../../images/icon/chevron-right.svg');
+				transform: rotate(-90deg);
+				background-repeat: no-repeat;
+				width: 12px;
+				height: 10px;
+				top: 5px;
+				right: -9px;
+			}
+		}
+	}
+}

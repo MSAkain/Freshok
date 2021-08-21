@@ -1,0 +1,61 @@
+.recent {
+
+
+	&__title {
+		margin-bottom: 60px;
+		text-align: left;
+		font-size: 30px;
+	}
+
+	&__slider {
+		display: flex !important;
+		justify-content: space-between;
+		margin-bottom: 72px;
+		
+	}
+
+	&__item {
+		margin-right: 30px;
+	}
+
+	.arrow {
+		position: absolute;
+		top: -80px;
+		z-index: 1;
+		width: 60px;
+		height: 60px;
+		border: 1px solid $silver-600;
+		border-radius: 6px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: fill 0.5s, background-color 0.5s, box-shadow 0.5s, border-color 0.5s;
+
+		&:active,
+		&:hover {
+			background-color: $green-200;
+			border-color: $grenn-500;
+			path {
+				fill: $grenn-500;
+			}
+		}
+
+		&:focus {
+			background-color: $green-200;
+			box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
+			border-color: $grenn-500;
+			path {
+				fill: $grenn-500;
+			}
+		}
+	}
+	
+	.hand-left {
+		right: 22px;
+	}
+	
+	.hand-right {
+		right: 110px;
+	}
+}
+
